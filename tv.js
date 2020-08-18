@@ -28,7 +28,7 @@
     // Descargar los datos
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM", function(resp) {
+        $.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM.json", function(resp) {
                 tableData = [];
 
             // Iterate over the JSON object
