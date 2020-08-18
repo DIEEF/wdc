@@ -35,15 +35,15 @@
             // Iterate over the JSON object
             for (var i = 0, len = resp.length; i < len; i++) {
                 tableData.push({
-                    "Indicador": resp[i].properties.Indicador,
-                    "Industria": resp[i].properties.Industria,
-                    "valor": resp[i].properties.valor,
-                    "cifras": resp[i].properties.cifras,
-                    "Subsector": resp[i].properties.Subsector,
-                    "fecha": resp[i].properties.fecha,
-                    "ID": resp[i].properties.ID,
-                    "ID2": resp[i].properties.ID2,
-                    "variacion": resp[i].properties.variacion
+                    "Indicador": resp[i].Indicador,
+                    "Industria": resp[i].Industria,
+                    "valor": resp[i].valor,
+                    "cifras": resp[i].cifras,
+                    "Subsector": resp[i].Subsector,
+                    "fecha": resp[i].fecha,
+                    "ID": resp[i].ID,
+                    "ID2": resp[i].ID2,
+                    "variacion": resp[i].variacion
                 });
             }
 
