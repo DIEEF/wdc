@@ -1,8 +1,9 @@
 (function() {
     // Create the connector object
     var myConnector = tableau.makeConnector();
-    var num_pages = 10;
+    var num_pages = 1;
 
+// Direccion web - cambiar estructura
     var api_key = "8922bff85ef645a09730d7c1836c3edf",
         base_uri = "https://api.themoviedb.org/3/",
         images_uri =  "https://image.tmdb.org/t/p/w500";
@@ -10,23 +11,20 @@
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
         var cols = [
-            { id: "poster_path", dataType: tableau.dataTypeEnum.string },
-            { id: "popularity", dataType: tableau.dataTypeEnum.float },
-            { id: "id", dataType: tableau.dataTypeEnum.int },
-            { id: "backdrop_path", dataType: tableau.dataTypeEnum.string },
-            { id: "vote_average", dataType: tableau.dataTypeEnum.float },
-            { id: "overview", dataType: tableau.dataTypeEnum.string },
-            { id: "first_air_date", dataType: tableau.dataTypeEnum.date },
-            { id: "origin_country", dataType: tableau.dataTypeEnum.string },
-            { id: "original_language", dataType: tableau.dataTypeEnum.string },
-            { id: "vote_count", dataType: tableau.dataTypeEnum.int },
-            { id: "name", dataType: tableau.dataTypeEnum.string },
-            { id: "original_name", dataType: tableau.dataTypeEnum.string }
+            { id: "Indicador", dataType: tableau.dataTypeEnum.string },
+            { id: "Industria", dataType: tableau.dataTypeEnum.string },
+            { id: "valor", dataType: tableau.dataTypeEnum.float },
+            { id: "cifras", dataType: tableau.dataTypeEnum.string },
+            { id: "Subsector", dataType: tableau.dataTypeEnum.string },
+            { id: "fecha", dataType: tableau.dataTypeEnum.date },
+            { id: "ID", dataType: tableau.dataTypeEnum.string },
+            { id: "ID2", dataType: tableau.dataTypeEnum.string },
+            { id: "variacion", dataType: tableau.dataTypeEnum.float }
         ];
 
         var tableSchema = {
-            id: "shows",
-            alias: "Top Rated TV Shows",
+            id: "EMIM",
+            alias: "Indicadores EMIM",
             columns: cols
         };
 
@@ -53,7 +51,7 @@
 
     function getResultsPromise(table, pageNum) {
         return new Promise(function(resolve, reject) {
-            var connectionUrl = base_uri + "tv/popular?api_key=" + api_key + "&page=" + pageNum;
+            var connectionUrl = https://github.com/DIEEF/c-test/raw/master/EMIM.xlsx;
             
             var xhr = $.ajax({
                 url: connectionUrl,
