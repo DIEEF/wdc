@@ -1,7 +1,6 @@
 (function() {
     // Crear el conector
     var myConnector = tableau.makeConnector();
-    var num_pages = 1;
 
     // Definir el esquema
     myConnector.getSchema = function(schemaCallback) {
@@ -27,7 +26,7 @@
     };
 
     // Descargar los datos
-// Download the data
+
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM.json", function(resp) {
             var feat = resp.features,
@@ -36,15 +35,15 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "Indicador": feat[i].Indicador,
-                    "Industria": feat[i].properties.title,
-                    "valor": feat[i].properties.title,
-                    "cifras": feat[i].properties.title,
-                    "Subsector": feat[i].properties.title,
-                    "fecha": feat[i].properties.title,
-                    "ID": feat[i].properties.title,
-                    "ID2": feat[i].properties.title,
-                    "variacion": feat[i]..properties.title
+                    "Indicador": feat[i].properties.Indicador,
+                    "Industria": feat[i].properties.Industria,
+                    "valor": feat[i].properties.valor,
+                    "cifras": feat[i].properties.cifras,
+                    "Subsector": feat[i].properties.Subsector,
+                    "fecha": feat[i].properties.fecha,
+                    "ID": feat[i].properties.ID,
+                    "ID2": feat[i].properties.ID2,
+                    "variacion": feat[i]..properties.variacion
                 });
             }
 
