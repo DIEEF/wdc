@@ -29,7 +29,7 @@
 
     myConnector.getData = function(table, doneCallback) {
         $.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM.json", function(resp) {
-            var feat = resp.features,
+            //var feat = resp.features,
                 tableData = [];
 
             // Iterate over the JSON object
