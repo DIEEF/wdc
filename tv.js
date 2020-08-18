@@ -36,15 +36,15 @@
             // Iterate over the JSON object
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "Indicador": feat[i].id,
-                    "Industria": feat[i].properties.mag,
+                    "Indicador": feat[i].Indicador,
+                    "Industria": feat[i].properties.title,
                     "valor": feat[i].properties.title,
                     "cifras": feat[i].properties.title,
                     "Subsector": feat[i].properties.title,
                     "fecha": feat[i].properties.title,
                     "ID": feat[i].properties.title,
                     "ID2": feat[i].properties.title,
-                    "variacion": feat[i].geometry.coordinates[1]
+                    "variacion": feat[i]..properties.title
                 });
             }
 
@@ -58,7 +58,7 @@
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "USGS Earthquake Feed"; // This will be the data source name in Tableau
+            tableau.connectionName = "EMIM"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
     });
