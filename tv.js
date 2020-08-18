@@ -43,7 +43,7 @@
                     "fecha": feat[i].properties.fecha,
                     "ID": feat[i].properties.ID,
                     "ID2": feat[i].properties.ID2,
-                    "variacion": feat[i]..properties.variacion
+                    "variacion": feat[i].properties.variacion
                 });
             }
 
