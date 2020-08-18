@@ -51,7 +51,7 @@
 
     function getResultsPromise(table, pageNum) {
         return new Promise(function(resolve, reject) {
-            var connectionUrl = https://github.com/DIEEF/c-test/raw/master/EMIM.xlsx;
+            var connectionUrl = "https://github.com/DIEEF/c-test/raw/master/EMIM.xlsx";
             
             var xhr = $.ajax({
                 url: connectionUrl,
