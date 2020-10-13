@@ -10,7 +10,7 @@
             { id: "valor", dataType: tableau.dataTypeEnum.float },
             { id: "cifras", dataType: tableau.dataTypeEnum.string },
             { id: "Subsector", dataType: tableau.dataTypeEnum.string },
-            { id: "fecha", dataType: tableau.dataTypeEnum.date },
+            { id: "fecha", dataType: tableau.dataTypeEnum.string },
             { id: "ID", dataType: tableau.dataTypeEnum.string },
             { id: "ID2", dataType: tableau.dataTypeEnum.string },
             { id: "variacion", dataType: tableau.dataTypeEnum.float }
