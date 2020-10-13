@@ -28,22 +28,23 @@
     // Descargar los datos
 
     myConnector.getData = function(table, doneCallback) {
-        $.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM.json", function(resp) {
-            //var feat = resp.features,
+//        $.getJSON("https://htpimages.gq/j.json", function(resp) {
+		$.getJSON("https://raw.githubusercontent.com/DIEEF/c-test/master/EMIM.json", function(resp) {
+            var feat = resp.data,
                 tableData = [];
 
             // Iterate over the JSON object
-            for (var i = 0, len = resp.length; i < len; i++) {
+            for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
-                    "Indicador": resp[i].Indicador,
-                    "Industria": resp[i].Industria,
-                    "valor": resp[i].valor,
-                    "cifras": resp[i].cifras,
-                    "Subsector": resp[i].Subsector,
-                    "fecha": resp[i].fecha,
-                    "ID": resp[i].ID,
-                    "ID2": resp[i].ID2,
-                    "variacion": resp[i].variacion
+                    "Indicador": feat[i].Indicador,
+                    "Industria": feat[i].Industria,
+                    "valor": feat[i].valor,
+                    "cifras": feat[i].cifras,
+                    "Subsector": feat[i].Subsector,
+                    "fecha": feat[i].fecha,
+                    "ID": feat[i].ID,
+                    "ID2": feat[i].ID2,
+                    "variacion": feat[i].variacion
                 });
             }
 
