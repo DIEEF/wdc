@@ -1,1 +1,0 @@
-schemaCallback([tableSchema]);
